@@ -1,0 +1,70 @@
+.verificar{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20%;
+    text-align: center;
+}
+
+label{
+    font-size: .9rem;
+  }
+  
+  .cuadro{
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0) 0%), #1d5297;
+    padding: .8rem 0;
+    margin: 0 0 0 0;
+    color: white;
+  }
+  
+  .recuadro{
+    padding: 2rem 1rem;
+    background-color: #ebebeb;
+    overflow: hidden;
+  }
+  
+  span{
+    color: red;
+  }
+  
+  .px-18{
+    padding: 0 18rem;
+  }
+  
+  
+  @media (min-width: 320px) and (max-width: 480px) {
+    h2{
+      font-size: 1.5rem !important;
+    }
+    h5{
+      font-size: 1rem !important;
+    }
+  }
+  
+  
+  
+   /*==============  utils ===========*/
+  .bg-white{
+    background-color: #fff;
+  }
+  .bg-gris{
+    background-color: #f5f5f5;
+  }
+  .bg-gris2{
+    background: #ebebeb;
+  }
+  .bg-azul{
+    background: #1d5297;
+  }
+  .text-gris{
+    color: #454e54;
+  }
+  .hv-100{
+    height: 100vh;
+  }
+  .pa-5{
+    padding: 5%;
+  }
+   /*============== Fin utils ===========*/
