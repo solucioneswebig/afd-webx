@@ -1,21 +1,61 @@
 <?php 
 
 
-class Conexion{
+/*
+* 
+*  CONEXION SERVIDOR   
+* 
 
 
-	public function conectar(){
+class Conexion extends PDO { 
+	private $tipo_de_base = 'mysql';
+	private $host = 'localhost';
+	private $nombre_de_base = 'director_directorio';
+	private $usuario = 'director_admon';
+	private $contrasena = 'Qls%jZ5VnKg5'; 
+	public function __construct() {
+	  //Sobreescribo el método constructor de la clase PDO.
+	  try{
+		 parent::__construct("{$this->tipo_de_base}:dbname={$this->nombre_de_base};host={$this->host};charset=utf8", $this->usuario, $this->contrasena);
+	  }catch(PDOException $e){
+		 echo 'Ha surgido un error y no se puede conectar a la base de datos. Detalle: ' . $e->getMessage();
+		 exit;
+	  }
+	} 
+} 
 
-		$link = new PDO("mysql: host=localhost; dbname=director_directorio", 
-			               "director_admon",
-			               "Qls%jZ5VnKg5",
-			               array(PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION,PDO::MYSQL_ATTR_INIT_COMMAND=>"SET NAMES utf8")
-									);
-		return $link;
-
-	}
+/*
+* 
+*  FIN  SERVIDOR   
+* 
+*/
 
 
+/*
+* 
+*  CONEXION LOCAL   
+* 
+*/
 
+class Conexion extends PDO { 
+	private $tipo_de_base = 'mysql';
+	private $host = 'localhost';
+	private $nombre_de_base = 'afiliados_webx';
+	private $usuario = 'root';
+	private $contrasena = ''; 
+	public function __construct() {
+	  //Sobreescribo el método constructor de la clase PDO.
+	  try{
+		 parent::__construct("{$this->tipo_de_base}:dbname={$this->nombre_de_base};host={$this->host};charset=utf8", $this->usuario, $this->contrasena);
+	  }catch(PDOException $e){
+		 echo 'Ha surgido un error y no se puede conectar a la base de datos. Detalle: ' . $e->getMessage();
+		 exit;
+	  }
+	} 
+} 
 
-}//fin de la clase Conexion
+/*
+* 
+*  FIN  LOCAL   
+* 
+*/

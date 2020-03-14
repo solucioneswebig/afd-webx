@@ -1,6 +1,8 @@
 <?php 
 
-session_start();
+if(!isset($_SESSION)){
+	session_start();
+}
 
 include "modulos/header.php";
 
@@ -37,6 +39,5 @@ if(isset($_GET["slug"])){
 }else{
   include "modulos/login.php";
 }
-
 
 include "modulos/footer.php";

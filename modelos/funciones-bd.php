@@ -1,9 +1,12 @@
 <?php
-session_start();
+if(!isset($_SESSION)){
+	session_start();
+}
 
 /*FUNCION SELECCIONAR VARIOS*/
 function select_all($sql){
-			$stmt = Conexion::conectar()->prepare($sql);
+			$conexion = new Conexion();
+			$stmt = $conexion->prepare($sql);
             $stmt->execute();  
             $datos = $stmt->fetchAll();
 			$stmt = null;
@@ -12,7 +15,8 @@ function select_all($sql){
 /*FUNCION SELECCIONAR VARIOS FIN*/
 /*FUNCION SELECCIONAR UNO*/
 function select_one($sql){
-			$stmt = Conexion::conectar()->prepare($sql);
+			$conexion = new Conexion();
+			$stmt = $conexion->prepare($sql);
             $stmt->execute();  
             $datos = $stmt->fetch();
 			$stmt = null;
@@ -35,8 +39,9 @@ foreach ($data as $key => $value) {
 		}
 		$i++;
 }
- $sql = "INSERT INTO ".$bd." (".$data_one.") VALUES (".$data_two.")";
-$stmt= Conexion::conectar()->prepare($sql);
+$sql = "INSERT INTO ".$bd." (".$data_one.") VALUES (".$data_two.")";
+$conexion = new Conexion();
+$stmt = $conexion->prepare($sql);
 $dato = $stmt->execute($data);
 //$stmt = null;
 return $dato;
@@ -50,7 +55,8 @@ foreach ($where as $key => $value) {
 }
 $sql = "DELETE FROM ".$bd."
 WHERE ".$campo." = ".$value_campo."";
-$stmt= Conexion::conectar()->prepare($sql);
+$conexion = new Conexion();
+$stmt = $conexion->prepare($sql);
 $dato = $stmt->execute();
 $stmt = null;
 return $dato;
@@ -75,21 +81,15 @@ foreach ($where as $key => $value) {
 	$value_where = $value;
 }
  $sql = "UPDATE ".$bd." SET ".$data_one." WHERE ".$campo_where."=".$value_where."";
-$stmt= Conexion::conectar()->prepare($sql);
+ $conexion = new Conexion();
+ $stmt = $conexion->prepare($sql);
 $dato =  $stmt->execute($data);
 $stmt = null;
 return $dato;
 }
 /*FUNCION ACTUALIZAR FIN*/
 
-/*LAST ID*/
 
-function last_id(){
-	$link = Conexion::conectar();
-	return $link->lastInsertId();
-}
-
-/*LAST ID FIN*/
 
 
 /*ACCEDER*/
