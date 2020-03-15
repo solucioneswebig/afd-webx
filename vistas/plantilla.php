@@ -1,5 +1,5 @@
 <?php 
-
+ob_start(); 
 include "modulos/includes/header.php";
 
 
@@ -28,6 +28,7 @@ if(isset($_GET["slug"])){
         unset($_SESSION['id']);
         
         session_destroy();
+
         header("Location: ".$url."");
           
       }else{
@@ -43,4 +44,7 @@ if(isset($_GET["slug"])){
   include "modulos/login.php";
   include "modulos/includes/footer.php";
 }
+
+
+ob_end_flush();
 
