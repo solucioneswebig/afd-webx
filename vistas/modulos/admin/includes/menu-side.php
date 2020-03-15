@@ -3,9 +3,9 @@
     <div class="sidebar-header">
       <h3><img src="<?php echo $url; ?>vistas/assets/img/logo-webx-blanco.png" class="img-fluid" alt="Logo webx"></h3>
     </div>
-
+    <h5 class="text-center">Programa de afiliados</h5>
     <ul class="list-unstyled components">
-      <p>Bienvenido: <?php echo $obtener_datos_user["nombre_completo"]." ".$obtener_datos_user["apellido_paterno"]; ?></p>
+      <p class="text-center"><?php echo $obtener_datos_user["nombre_completo"]." ".$obtener_datos_user["apellido_paterno"]; ?></p>
       <li>
         <a href="<?php echo $url ?>inicio">Inicio</a>
       </li>

@@ -82,22 +82,21 @@ a, a:hover, a:focus {
 
 #sidebar ul p {
     color: #fff;
-    padding: 10px;
+    padding: 0px;
 }
-
 #sidebar ul li a {
     padding: 10px;
     font-size: 1.1em;
     display: block;
 }
 #sidebar ul li a:hover {
-    color: #1d5297;
-    background: #fff;
+    color: #fff;
+    background: #ff520e;
 }
 
 #sidebar ul li.active > a, a[aria-expanded="true"] {
     color: #fff;
-    background: #1d5297;
+    background: #ff520e;
 }
 
 
@@ -116,7 +115,7 @@ a[data-toggle="collapse"] {
 ul ul a {
     font-size: 0.9em !important;
     padding-left: 30px !important;
-    background: #1d5297;
+    background: #ff520e;
 }
 
 ul.CTAs {
@@ -133,11 +132,11 @@ ul.CTAs a {
 
 a.download {
     background: #fff;
-    color: #1d5297;
+    color: #ff520e;
 }
 
 a.article, a.article:hover {
-    background: #1d5297 !important;
+    background: #ff520e !important;
     color: #fff !important;
 }
 
@@ -220,4 +219,14 @@ a.article, a.article:hover {
         transform: rotate(-45deg) translate(1px, -1px);
     }
 
+}
+
+/* ---
+  CUSTOM STYLES
+*/
+
+
+.content-wrapper {
+    height: 80vh;
+    overflow-y: auto;
 }

@@ -9,10 +9,13 @@ if(isset($_GET["slug"])){
 
   if($rutas[0]=="verificar"){
     include "modulos/formulario-mas-info.php";  
+    include "modulos/includes/footer.php";
   }else if($rutas[0] == "registro"){
       include "modulos/formulario-registro-rapido.php";
+      include "modulos/includes/footer.php";
   }else if($rutas[0] == "inicio"){
       include "modulos/login.php";
+      include "modulos/includes/footer.php";
   }else if($rutas[0] == "dashboard"){
       
       if(isset($rutas[1]) && $rutas[1] == "inicio"){
@@ -33,10 +36,11 @@ if(isset($_GET["slug"])){
       
   }else{
       include "modulos/includes/404.php";
+      include "modulos/includes/footer.php";
   }
 
 }else{
   include "modulos/login.php";
+  include "modulos/includes/footer.php";
 }
 
-include "modulos/includes/footer.php";
