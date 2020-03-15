@@ -1,4 +1,4 @@
-<div class="container bg-white mt-4">
+<div class="container bg-white mt-4 mb-5">
   <div class="row pa-5">
     <div class="col-md-7 order-2 order-sm-1">
       <p>¡Bienvenido al Programa de Afiliados HostGator!</p>
@@ -38,13 +38,13 @@
             <div class="form-group bg-white">
               <input type="password" class="form-control" placeholder="Ingresar Password" autocomplete="off" name="passwordI">
             </div>
-            <button type="submit" class="btn btn-primary" name="access_afiliado">Iniciar Sessión</button>
+            <button type="submit" class="btn btn-primary btn-block" name="access_afiliado">Iniciar Sessión</button>
 
             </form>
           </div>
 
           <div class="col-md-12 text-center my-4">
-            <a href="<?php echo $url; ?>registrar" class="btn btn-success btn-block">Registrate ahora</a>
+             <a href="<?php echo $url; ?>recuperar-password" class="text-center">Recuperar contraseña</a> 
           </div>
 
         </div>

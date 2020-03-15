@@ -23,8 +23,10 @@ $url = ctrRuta();
   </head>
   <body class="bg-gris2">
   <?php if (empty($_SESSION["validarSession"])) { ?> 
-  <nav class="navbar navbar-expand-lg navbar-light sticky-top text-white bg-azul" id="menu-principal">
-  <a class="navbar-brand text-white" href="<?php echo $url ?>">Logo</a>
+  <section class="bg-azul">
+  <div class="container">
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top text-white" id="menu-principal">
+  <a class="navbar-brand text-white" href="<?php echo $url ?>"><img src="<?php echo $url; ?>vistas/assets/img/logo-webx-blanco.png" width="200" alt="WEBX.MX"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -35,9 +37,7 @@ $url = ctrRuta();
       <li class="nav-item active">
         <a class="nav-link text-white" href="<?php echo $url ?>">Inicio <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link text-white" href="#">Mi cuenta</a>
-      </li>
+
       <li class="nav-item">
         <a class="nav-link text-white" href="<?php echo $url ?>registro">Registrate ahora</a>
       </li>
@@ -45,5 +45,7 @@ $url = ctrRuta();
 
   </div>
 </nav>
+</div>
+</section>
 <?php } ?>
 

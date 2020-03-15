@@ -12,12 +12,12 @@ label{
     font-size: .9rem;
   }
   
-  .cuadro{
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0) 0%), #1d5297;
+  .cuadro {
+    background: #e76004;
     padding: .8rem 0;
     margin: 0 0 0 0;
     color: white;
-  }
+}
   
   .recuadro{
     padding: 2rem 1rem;
@@ -41,10 +41,25 @@ label{
     h5{
       font-size: 1rem !important;
     }
+
+    img.img-fluid.logo-footer {
+      width: 60% !important;
+      margin-bottom: 50px  !important;
+    }
+    .footer{
+      text-align: center;
+    }
   }
+
+  @media (min-width: 768px){
+    img.img-fluid.logo-footer {
+      width: 90%;
+      margin-bottom: 40px;
+  }
+  }
+
   
-  
-  
+
    /*==============  utils ===========*/
   .bg-white{
     background-color: #fff;
@@ -56,7 +71,7 @@ label{
     background: #ebebeb;
   }
   .bg-azul{
-    background: #1d5297;
+    background: #000000;
   }
   .text-gris{
     color: #454e54;

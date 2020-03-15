@@ -1,7 +1,7 @@
   <!-- Sidebar Holder -->
   <nav id="sidebar">
     <div class="sidebar-header">
-      <h3>Bootstrap Sidebar</h3>
+      <h3><img src="<?php echo $url; ?>vistas/assets/img/logo-webx-blanco.png" class="img-fluid" alt="Logo webx"></h3>
     </div>
 
     <ul class="list-unstyled components">
