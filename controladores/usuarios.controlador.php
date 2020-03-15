@@ -232,42 +232,6 @@ class ControladorUsuarios
 }
 
 	
-		/*==========================================
-		=            INGRESO USUARIOS            =
-	==========================================*/
-	public function ctrIngresoUsuario()
-	{
 
-		if(isset($_POST["usuario"]) && isset($_POST["passwordI"])){
-			
-			$url = ctrRuta();
-			
-			
-			$encriptar = crypt($_POST["passwordI"], '$2a$07$asxx54ahjppf45sd87a5a4dDDGsystemdev$');
-
-			$tabla = "tb_registro_afiliado";
-			$item = "nombre_usuario";
-			$valor = $_POST["usuario"];
-
-			$respuesta = ModeloUsuarios::mdlMostrarUsuarios($tabla, $item, $valor);
-			
-			if($respuesta["nombre_usuario"] == $_POST["usuario"] && password_verify($respuesta["password"], $_POST["passwordI"])){
-				
-				$_SESSION["validarSession"] = "ok";
-				$_SESSIOM["id"] = $respuesta["id_usuario"];
-
-
-				echo '<script type="text/javascript">
-				location.href = "http://afiliados.webx.mx/dashboard/";
-						</script>';
-
-			}else{
-				
-				
-			}
-
-			// var_dump($respuesta);
-		}
-	}
 
 }//fin clase usuarios

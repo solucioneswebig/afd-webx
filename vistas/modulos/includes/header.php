@@ -39,7 +39,7 @@ $url = ctrRuta();
         <a class="nav-link text-white" href="#">Mi cuenta</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-white" href="<?php echo $url ?>registrar">Registrate ahora</a>
+        <a class="nav-link text-white" href="<?php echo $url ?>registro">Registrate ahora</a>
       </li>
     </ul>
 

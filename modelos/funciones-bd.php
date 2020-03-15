@@ -102,7 +102,7 @@ $obtener_datos = select_one("SELECT * FROM tb_registro_afiliado WHERE nombre_usu
 if(password_verify($_POST['passwordI'], $obtener_datos['password'])){
 
 				$_SESSION["validarSession"] = "ok";
-				$_SESSIOM["id"] = $respuesta["id_usuario"];
+				$_SESSION["id"] = $obtener_datos["id_usuario"];
 
 
 				header("Location: ".$url."dashboard");
