@@ -1,8 +1,6 @@
 <?php
-if(!isset($_SESSION)){
-	session_start();
-}
-$_SESSION["validarSession"] = "no";
+
+
 //controllers
 require_once "controladores/plantilla.controlador.php";
 require_once "controladores/usuarios.controlador.php";

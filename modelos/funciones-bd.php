@@ -1,7 +1,7 @@
 <?php
-if(!isset($_SESSION)){
-	session_start();
-}
+
+session_start();
+$url = ctrRuta();
 
 /*FUNCION SELECCIONAR VARIOS*/
 function select_all($sql){
@@ -105,10 +105,7 @@ if(password_verify($_POST['passwordI'], $obtener_datos['password'])){
 				$_SESSIOM["id"] = $respuesta["id_usuario"];
 
 
-				echo '<script type="text/javascript">
-				location.href = "http://afiliados.webx.mx/dashboard/";
-						</script>';
-
+				header("Location: ".$url."dashboard");
 }
 
 }

@@ -1,10 +1,6 @@
 <?php 
 
-if(!isset($_SESSION)){
-	session_start();
-}
-
-include "modulos/header.php";
+include "modulos/includes/header.php";
 
 
 if(isset($_GET["slug"])){
@@ -19,9 +15,12 @@ if(isset($_GET["slug"])){
       include "modulos/login.php";
   }else if($rutas[0] == "dashboard"){
       
-      if($rutas[1] == "inicio"){
-        include "modulos/cuenta.php";  
-      }else if($rutas[1] == "logaut"){
+      if(isset($rutas[1]) && $rutas[1] == "inicio"){
+
+        include "modulos/admin/cuenta.php"; 
+
+      }else if(isset($rutas[1]) && $rutas[1] == "logaut"){
+
         unset($_SESSION['validarSession']);
         unset($_SESSION['id']);
         
@@ -29,15 +28,15 @@ if(isset($_GET["slug"])){
         header("Location: ".$url."");
           
       }else{
-        include "modulos/cuenta.php";  
+        include "modulos/admin/cuenta.php";  
       }
       
   }else{
-      include "modulos/404.php";
+      include "modulos/includes/404.php";
   }
 
 }else{
   include "modulos/login.php";
 }
 
-include "modulos/footer.php";
+include "modulos/includes/footer.php";
