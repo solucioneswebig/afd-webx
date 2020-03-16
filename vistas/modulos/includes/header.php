@@ -17,8 +17,9 @@ $url = ctrRuta();
     <link href="<?php echo $url; ?>vistas/assets/css/style.css" rel="stylesheet">
     <link href="<?php echo $url; ?>vistas/assets/css/style5.css" rel="stylesheet">
 
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="<?php echo $url; ?>vistas/assets/js/jquery.min.js"></script>
     <script src="<?php echo $url; ?>vistas/assets/js/script.js"></script>
+    <script src="<?php echo $url; ?>vistas/assets/js/ajax.js"></script>
 
   </head>
   <body class="bg-gris2">

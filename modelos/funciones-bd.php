@@ -3,6 +3,8 @@
 session_start();
 $url = ctrRuta();
 
+require_once "conexion.php";
+
 /*FUNCION SELECCIONAR VARIOS*/
 function select_all($sql){
 			$conexion = new Conexion();
