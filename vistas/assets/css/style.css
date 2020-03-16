@@ -56,9 +56,12 @@ label{
       width: 90%;
       margin-bottom: 40px;
   }
+
   }
 
-  
+  .wrapper{
+    min-height: 52vh;
+  }
 
    /*==============  utils ===========*/
   .bg-white{

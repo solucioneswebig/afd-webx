@@ -1,16 +1,9 @@
 <?php  
-/*********************************
-************HOLA******************
-**********************************/
-class ControladorUsuarios 
-{
-	
+
 	
 	/*==========================================
 		=  REGISTRAR USUARIOS FORMULARIO RAPIDO    =
 	==========================================*/
-	public function ctrRegistroUsuarios(){
-
 		
 
 		if(isset($_POST["password"])){
@@ -22,23 +15,26 @@ class ControladorUsuarios
 			$url = ctrRuta();
 
 			$datos = array(
-				'nombre_usuario' 	=> 	$_POST["nombre_usuario"], 
-				'password' 				=>	$encriptar, 
-				'nombre_completo' => 	$_POST["nombre_completo"], 
+				'nombre_usuario'   => $_POST["nombre_usuario"], 
+				'password' 		   => $encriptar, 
+				'nombre_completo'  => $_POST["nombre_completo"], 
 				'apellido_paterno' => $_POST["apellido_paterno"], 
 				'apellido_materno' => $_POST["apellido_materno"], 
-				'direccion' => 				$_POST["direccion"], 
-				'colonia' => 					$_POST["colonia"], 
-				'municipio' => 				$_POST["municipio"], 
-				'estado' => 					$_POST["estado"], 
-				'codigo_postal' => 		$_POST["codigo_postal"], 
-				'telefono' => 				$_POST["telefono"], 
-				'email' => 						$encriptarEmail
+				'direccion'        => $_POST["direccion"], 
+				'colonia'          => $_POST["colonia"], 
+				'municipio'        => $_POST["municipio"], 
+				'estado'           => $_POST["estado"], 
+				'codigo_postal'    => $_POST["codigo_postal"], 
+				'telefono'         => $_POST["telefono"], 
+				'email_code'       => $encriptarEmail,
+				'email'            => $_POST['email'],
+				'estatus'          => 1
+				
 			);
 
 			$tabla = "tb_registro_afiliado";
 
-			$respuesta = ModeloUsuarios::mdlRegistroUsuario($tabla, $datos);
+			$respuesta = insert($tabla, $datos);
 			// echo $respuesta;
 
 			if($respuesta == "ok"){
@@ -121,17 +117,11 @@ class ControladorUsuarios
 
 	}//fin ok
 
-		}
+}
 	
 
-	}
 
-	/*==========================================
-		=  REGISTRAR USUARIOS FORMULARIO COMPLETO    =
-	==========================================*/
-	public function ctrRegistroUsuarios_completo(){
-
-		if(isset($_POST["emailPaypal"])){
+if(isset($_POST["emailPaypal"])){
 
 			$datos = array(
 				'correo' 	=> 	$_POST["correo"],
@@ -152,7 +142,7 @@ class ControladorUsuarios
 
 			$tabla = "tb_registro_afiliado_mas_info";
 
-			$respuesta = ModeloUsuarios::mdlRegistroUsuario_completo($tabla, $datos);
+			$respuesta = insert($tabla, $datos);
 
 			if($respuesta){
 				// echo "guardado";
@@ -161,12 +151,14 @@ class ControladorUsuarios
 
 			}
 
-		}
-	}
+}
 
 
-	public function enviar_cliente_vuelta($correo){
+	
 
+
+
+function enviar_cliente_vuelta($correo){
 
     $mensaje_client  = "<div style='padding: 30px;width:80%;max-width:400px;margin:0 auto;background: #f9f9f9;box-shadow: 2px 2px 3px #999;margin-top: 30px;'>";
     
@@ -232,6 +224,3 @@ class ControladorUsuarios
 }
 
 	
-
-
-}//fin clase usuarios
