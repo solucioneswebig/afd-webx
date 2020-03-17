@@ -31,6 +31,22 @@ if(isset($_GET["slug"])){
 
         include "modulos/admin/cuenta.php"; 
 
+      }else if(isset($rutas[1]) && $rutas[1] == "ventas"){
+
+        include "modulos/admin/ventas.php"; 
+
+      }else if(isset($rutas[1]) && $rutas[1] == "marketing"){
+
+        include "modulos/admin/marketing.php"; 
+
+      }else if(isset($rutas[1]) && $rutas[1] == "historial-pagos"){
+
+        include "modulos/admin/historial-pagos.php";
+
+      }else if(isset($rutas[1]) && $rutas[1] == "estadisticas"){
+
+        include "modulos/admin/estadisticas.php"; 
+
       }else if(isset($rutas[1]) && $rutas[1] == "logaut"){
 
         unset($_SESSION['validarSession']);

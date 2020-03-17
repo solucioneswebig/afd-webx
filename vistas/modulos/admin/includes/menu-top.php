@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg color-header bg-light">
       <div class="container-fluid">
 
         <button type="button" id="sidebarCollapse" class="navbar-btn">
@@ -12,17 +12,11 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="nav navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Page</a>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#">Mi Cuenta</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Page</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Page</a>
-            </li>
-            <li class="nav-item">
-               <a class="nav-link" href="<?php echo $url; ?>dashboard/logaut">Salir</a>
+               <a class="nav-link text-white" href="<?php echo $url; ?>dashboard/logaut">Salir</a>
             </li>
           </ul>
         </div>

@@ -6,11 +6,36 @@
     <h5 class="text-center">Programa de afiliados</h5>
     <ul class="list-unstyled components">
       <p class="text-center"><?php echo $obtener_datos_user["nombre_completo"]." ".$obtener_datos_user["apellido_paterno"]; ?></p>
+     
+
       <li>
         <a href="<?php echo $url ?>inicio">Inicio</a>
       </li>
+      
+      <li>
+        <a href="<?php echo $url ?>inicio">MARKETING</a>
+      </li>
 
-      <li class="active">
+      <li>
+        <a href="<?php echo $url ?>inicio">VENTAS</a>
+      </li>
+
+      <li>
+        <a href="<?php echo $url ?>inicio">HISTORIAL DE PAGOS</a>
+      </li>
+
+      <li>
+        <a href="<?php echo $url ?>inicio">ESTADISTICAS</a>
+      </li>
+      </li>
+
+      <li>
+        <a href="<?php echo $url ?>inicio">MI CUENTA</a>
+      </li>
+
+
+
+     <!-- <li class="active">
         <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
         <ul class="collapse list-unstyled" id="homeSubmenu">
           <li>
@@ -36,7 +61,7 @@
           </li>
         </ul>
       </li>
-    </ul>
+    </ul>-->
 
 
   </nav>

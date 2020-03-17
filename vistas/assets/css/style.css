@@ -57,6 +57,10 @@ label{
       margin-bottom: 40px;
   }
 
+    .alto-caja{
+      min-height: 140px;
+    }
+
   }
 
   .wrapper{
